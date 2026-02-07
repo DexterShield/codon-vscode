@@ -3,7 +3,7 @@
     "displayName": "Codon Language Support",
     "description": "Syntax highlighting, snippets, and language support for Codon - the high-performance Python compiler",
     "version": "0.1.0",
-    "publisher": "yosri@dextershield.com",
+    "publisher": "Yosri",
     "author": {
         "name": "Yosri",
         "email": "yosri@dextershield.com",
