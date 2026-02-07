@@ -1,0 +1,84 @@
+{
+    "name": "codon-lang",
+    "displayName": "Codon Language Support",
+    "description": "Syntax highlighting, snippets, and language support for Codon - the high-performance Python compiler",
+    "version": "0.1.0",
+    "publisher": "yosri@dextershield.com",
+    "author": {
+        "name": "Yosri",
+        "email": "yosri@dextershield.com",
+        "url": "https://www.DexterShield.com"
+    },
+    "scripts": {
+        "prepublishOnly": "vsce package"
+    },
+    "devDependencies": {
+        "vsce": "^2.15.0"
+    },
+    "icon": "images/icon.png",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DexterShield/codon-vscode"
+    },
+    "bugs": {
+        "url": "https://github.com/DexterShield/codon-vscode/issues"
+    },
+    "homepage": "https://github.com/DexterShield/codon-vscode#readme",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "keywords": [
+        "codon",
+        "python",
+        "compiler",
+        "high-performance",
+        "exaloop"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "codon",
+                "aliases": [
+                    "Codon",
+                    "codon"
+                ],
+                "extensions": [
+                    ".codon"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./images/icon.png",
+                    "dark": "./images/icon.png"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "codon",
+                "scopeName": "source.codon",
+                "path": "./syntaxes/codon.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "codon",
+                "path": "./snippets/codon.json"
+            }
+        ],
+        "configuration": {
+            "title": "Codon",
+            "properties": {
+                "codon.highlighting.enableExtended": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable extended syntax highlighting for Codon-specific features"
+                }
+            }
+        }
+    }
+}

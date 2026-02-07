@@ -1,0 +1,30 @@
+# Hello World in Codon
+def main():
+    print("Hello from Codon! 🔥")
+
+if __name__ == '__main__':
+    main()
+
+# C Interop Example
+from C import printf
+
+def greet_c(name: str):
+    printf("Hello from C: %s\n".c_str(), name.c_str())
+
+greet_c("Codon")
+
+# Parallel Computing Example
+@par(num_threads=4)
+for i in range(100):
+    print(f"Thread processing: {i}")
+
+# HTTP Server Example (simplified)
+from C import socket, bind, listen
+from C import AF_INET, SOCK_STREAM
+
+def start_server(port: int):
+    sock = socket(AF_INET, SOCK_STREAM, 0)
+    # Bind and listen
+    print(f"Server starting on port {port}")
+
+start_server(8080)

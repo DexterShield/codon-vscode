@@ -1,0 +1,117 @@
+{
+    "Author Comment Header": {
+        "prefix": "yosri",
+        "body": [
+            "'''",
+            "Author: Yosri",
+            "Email: yosri@dextershield.com",
+            "'''"
+        ],
+        "description": "Comment author name"
+    },
+    "C Import Function": {
+        "prefix": "cimport",
+        "body": [
+            "from C import ${1:function_name}(${2:arg_type}) -> ${3:return_type}"
+        ],
+        "description": "Import C function"
+    },
+    "C Import Multiple": {
+        "prefix": "cimports",
+        "body": [
+            "from C import (",
+            "    ${1:function1},",
+            "    ${2:function2},",
+            "    ${3:function3}",
+            ")"
+        ],
+        "description": "Import multiple C functions"
+    },
+    "Parallel For Loop": {
+        "prefix": "par",
+        "body": [
+            "@par(num_threads=${1:4}, schedule='${2:dynamic}')",
+            "for ${3:i} in range(${4:n}):",
+            "    ${5:# parallel code}"
+        ],
+        "description": "Parallel for loop with @par decorator"
+    },
+    "GPU Kernel": {
+        "prefix": "gpu",
+        "body": [
+            "@par(gpu=True)",
+            "for ${1:i} in range(${2:n}):",
+            "    ${3:# GPU code}"
+        ],
+        "description": "GPU parallelized loop"
+    },
+    "Export Function": {
+        "prefix": "export",
+        "body": [
+            "@export",
+            "def ${1:function_name}(${2:args}) -> ${3:return_type}:",
+            "    ${4:# exported function}"
+        ],
+        "description": "Export function for C/C++ interop"
+    },
+    "HTTP Server": {
+        "prefix": "httpserver",
+        "body": [
+            "from C import socket, bind, listen, accept, recv, send, close",
+            "from C import AF_INET, SOCK_STREAM, INADDR_ANY, sockaddr_in",
+            "",
+            "class HTTPServer:",
+            "    def __init__(self, port: int = 8080):",
+            "        self.port = port",
+            "    ",
+            "    def run(self):",
+            "        # Server implementation",
+            "        pass",
+            "",
+            "app = HTTPServer(port=${1:8080})",
+            "app.run()"
+        ],
+        "description": "HTTP server template"
+    },
+    "HTTP Route": {
+        "prefix": "route",
+        "body": [
+            "@app.route(\"${1:/path}\")",
+            "def ${2:handler}(req: HTTPRequest) -> str:",
+            "    return \"${3:response}\""
+        ],
+        "description": "HTTP route handler"
+    },
+    "Pointer Type": {
+        "prefix": "ptr",
+        "body": "ptr[${1:byte}]",
+        "description": "Pointer type"
+    },
+    "LLVM Function": {
+        "prefix": "llvm",
+        "body": [
+            "@llvm",
+            "def ${1:function_name}(${2:args}) -> ${3:return_type}:",
+            "    \"\"\"",
+            "    ${4:; LLVM IR code here}",
+            "    \"\"\""
+        ],
+        "description": "LLVM function with inline IR"
+    },
+    "Main Function": {
+        "prefix": "main",
+        "body": [
+            "def main():",
+            "    ${1:# main code}",
+            "",
+            "if __name__ == '__main__':",
+            "    main()"
+        ],
+        "description": "Main function template"
+    },
+    "Type Annotation": {
+        "prefix": "typed",
+        "body": "${1:var}: ${2:type} = ${3:value}",
+        "description": "Typed variable declaration"
+    }
+}
