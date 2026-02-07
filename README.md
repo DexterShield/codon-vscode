@@ -23,11 +23,10 @@ Syntax highlighting, snippets, and language support for [Codon](https://github.c
 4. Type "Install from VSIX"
 5. Select the downloaded `.vsix` file
 
-#### Or Using terminal
-
-```bash
-code --install-extension codon-lang-0.1.0.vsix
-```
+- #### Or Using terminal
+    ```bash
+    code --install-extension codon-lang-0.1.0.vsix
+    ```
 
 ### From Source
 
